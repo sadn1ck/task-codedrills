@@ -1,8 +1,5 @@
 <template>
-  <div>
-      <h1>
-          Submissions for Problem A
-      </h1>
+  <div class="pa-8">
       <SubmissionTable />
   </div>
 </template>
