@@ -10,6 +10,16 @@ export const rankHeaders = [
 ];
 export const rankData = [
   {
+    name: 'didntsolve1',
+    A: 0,
+    B: 0,
+    C: 0,
+    D: 0,
+    E: 0,
+    score: 0,
+    rank: 0,
+  },
+  {
     name: 'awaggitt12',
     A: 71,
     B: 68,
