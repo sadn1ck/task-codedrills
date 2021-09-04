@@ -15,6 +15,11 @@ const routes: Array<RouteConfig> = [
     name: 'Scoreboard',
     component: () => import(/* webpackChunkName: "scoreboard" */ '../views/Scoreboard.vue'),
   },
+  {
+    path: '/submissions',
+    name: 'Submissions',
+    component: () => import(/* webpackChunkName: "submissions" */ '../views/Submissions.vue'),
+  },
 ];
 
 const router = new VueRouter({

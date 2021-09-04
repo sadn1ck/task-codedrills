@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-center">CodeDrills Frontend Task</h1>
+  <h1 class="text-center pa-8">CodeDrills Frontend Task</h1>
 </template>
 
 <script lang="ts">
