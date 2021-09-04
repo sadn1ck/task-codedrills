@@ -1,12 +1,12 @@
 export const rankHeaders = [
-  { text: 'Rank', value: 'rank' },
-  { text: 'Username', value: 'name' },
-  { text: 'Score', value: 'score' },
-  { text: 'A', value: 'A' },
-  { text: 'B', value: 'B' },
-  { text: 'C', value: 'C' },
-  { text: 'D', value: 'D' },
-  { text: 'E', value: 'E' },
+  { class: 'text-overline', text: 'Rank', value: 'rank' },
+  { class: 'text-overline', text: 'Username', value: 'name' },
+  { class: 'text-overline', text: 'Score', value: 'score' },
+  { class: 'text-overline', text: 'A', value: 'A' },
+  { class: 'text-overline', text: 'B', value: 'B' },
+  { class: 'text-overline', text: 'C', value: 'C' },
+  { class: 'text-overline', text: 'D', value: 'D' },
+  { class: 'text-overline', text: 'E', value: 'E' },
 ];
 export const rankData = [
   {

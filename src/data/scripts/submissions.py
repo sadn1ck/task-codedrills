@@ -10,7 +10,7 @@ submissions = []
 for d in data:
     subm = {}
     subm['id'] = str(uuid.uuid4())
-    subm['submitted_by'] = d['name']
+    subm['submittedBy'] = d['name']
     subm['time'] = str(random.randint(0, 1000)) + 'ms'
     subm['memory'] = str(random.randint(0, 5000)) + 'KB'
     subm['title'] = 'This is the way'
