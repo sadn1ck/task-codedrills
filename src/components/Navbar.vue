@@ -1,13 +1,53 @@
 <template>
   <nav>
-    <v-toolbar class="d-flex">
-      <v-toolbar-items class="justify-space-around">
-        <v-btn text v-for="item in menuItems" :key="item.title" :to="item.path">
-          <v-icon left>{{ item.icon }}</v-icon>
-          {{ item.title }}
-        </v-btn>
-      </v-toolbar-items>
+    <!-- for large screens -->
+    <v-toolbar class="hidden-sm-and-down">
+      <v-toolbar-title>
+        FakeCodeDrills
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn text v-for="item in menuItems" :key="item.title" :to="item.path">
+        <v-icon left>{{ item.icon }}</v-icon>
+        {{ item.title }}
+      </v-btn>
     </v-toolbar>
+    <!-- for mobiles -->
+    <v-toolbar class="hidden-md-and-up">
+      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title>
+        FakeCodeDrills
+      </v-toolbar-title>
+    </v-toolbar>
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+    >
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title>Made by @sadn1ck</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider></v-divider>
+
+      <v-list dense>
+        <v-list-item
+          v-for="item in menuItems"
+          :key="item.title"
+          link
+          :to="item.path"
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
   </nav>
 </template>
 <script>
@@ -18,7 +58,7 @@ export default Vue.extend({
   data() {
     return {
       appTitle: 'FakeCodeDrills',
-      sidebar: false,
+      drawer: false,
       menuItems: [
         { title: 'Home', path: '/', icon: 'mdi-home' },
         { title: 'Scoreboard', path: '/scoreboard', icon: 'mdi-format-list-numbered' },

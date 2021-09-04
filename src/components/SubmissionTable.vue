@@ -3,17 +3,26 @@
     <v-card>
       <v-card-title>
         Submissions
+        <v-spacer></v-spacer>
+        <v-text-field
+          v-model="search"
+          append-icon="mdi-magnify"
+          label="Search usernames"
+          single-line
+          hide-details
+        ></v-text-field>
       </v-card-title>
-      <div v-if="getModalState">
-        <CodeModal :activeRow="activeCodeModalRow" />
-      </div>
       <v-data-table
         :headers="headers"
         :items="items"
         class="elevation-1"
+        :search="search"
         @click:row="handleClick"
       ></v-data-table>
     </v-card>
+    <div v-if="getModalState">
+      <CodeModal :activeRow="activeCodeModalRow" />
+    </div>
   </div>
 </template>
 <script>
@@ -36,12 +45,12 @@ export default Vue.extend({
   data() {
     return {
       activeCodeModalRow: {},
+      search: '',
     };
   },
   methods: {
     ...mapActions(['toggleModal']),
     handleClick(row) {
-      console.log(row);
       this.activeCodeModalRow = row;
       this.toggleModal();
     },
