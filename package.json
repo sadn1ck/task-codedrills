@@ -9,13 +9,16 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "prismjs": "^1.24.1",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
+    "vue-prism-editor": "^1.2.2",
     "vue-router": "^3.2.0",
     "vuetify": "^2.4.0",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
+    "@types/prismjs": "^1.16.6",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.18.0",
     "@vue/cli-plugin-babel": "~4.5.0",

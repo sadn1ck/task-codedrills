@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@types/prismjs': ^1.16.6
   '@typescript-eslint/eslint-plugin': ^4.18.0
   '@typescript-eslint/parser': ^4.18.0
   '@vue/cli-plugin-babel': ~4.5.0
@@ -16,12 +17,14 @@ specifiers:
   eslint: ^6.7.2
   eslint-plugin-import: ^2.20.2
   eslint-plugin-vue: ^6.2.2
+  prismjs: ^1.24.1
   register-service-worker: ^1.7.1
   sass: ~1.32.0
   sass-loader: ^10.0.0
   typescript: ~4.1.5
   vue: ^2.6.11
   vue-cli-plugin-vuetify: ~2.4.2
+  vue-prism-editor: ^1.2.2
   vue-router: ^3.2.0
   vue-template-compiler: ^2.6.11
   vuetify: ^2.4.0
@@ -30,13 +33,16 @@ specifiers:
 
 dependencies:
   core-js: 3.17.2
+  prismjs: 1.24.1
   register-service-worker: 1.7.2
   vue: 2.6.14
+  vue-prism-editor: 1.2.2_vue@2.6.14
   vue-router: 3.5.2
   vuetify: 2.5.8_vue@2.6.14
   vuex: 3.6.2_vue@2.6.14
 
 devDependencies:
+  '@types/prismjs': 1.16.6
   '@typescript-eslint/eslint-plugin': 4.30.0_aa6c6d484bd973127e861a3b43447cae
   '@typescript-eslint/parser': 4.30.0_eslint@6.8.0+typescript@4.1.6
   '@vue/cli-plugin-babel': 4.5.13_ff590b0de5aca690f3f4042d35869c4a
@@ -1389,6 +1395,10 @@ packages:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
     dev: true
     optional: true
+
+  /@types/prismjs/1.16.6:
+    resolution: {integrity: sha512-dTvnamRITNqNkqhlBd235kZl3KfVJQQoT5jkXeiWSBK7i4/TLKBNLV0S1wOt8gy4E2TY722KLtdmv2xc6+Wevg==}
+    dev: true
 
   /@types/q/1.5.5:
     resolution: {integrity: sha512-L28j2FcJfSZOnL1WBjDYp2vUHCeIFlyYI/53EwD/rKUBQ7MtUUfbQWiyKJGpcnv4/WgrhWsFKrcPstcAt/J0tQ==}
@@ -7484,6 +7494,10 @@ packages:
       renderkid: 2.0.7
     dev: true
 
+  /prismjs/1.24.1:
+    resolution: {integrity: sha512-mNPsedLuk90RVJioIky8ANZEwYm5w9LcvCXrxHlwf4fNVSn8jEipMybMkWUyyF0JhnC+C4VcOVSBuHRKs1L5Ow==}
+    dev: false
+
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
     dev: true
@@ -9297,6 +9311,15 @@ packages:
       webpack: 4.46.0
     dev: true
     optional: true
+
+  /vue-prism-editor/1.2.2_vue@2.6.14:
+    resolution: {integrity: sha512-Lq2VgVygTx3Whn/tC8gD4m1ajA4lzSyCTqPLZA1Dq/ErbBaZA93FWRblwCoDR7AD2nXhGWuiTzb5ih3guzB7DA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      vue: ^2.6.11
+    dependencies:
+      vue: 2.6.14
+    dev: false
 
   /vue-router/3.5.2:
     resolution: {integrity: sha512-807gn82hTnjCYGrnF3eNmIw/dk7/GE4B5h69BlyCK9KHASwSloD1Sjcn06zg9fVG4fYH2DrsNBZkpLtb25WtaQ==}
