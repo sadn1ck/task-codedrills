@@ -1,23 +1,31 @@
-# task-codedrills
+# [CodeDrills Frontend Task](https://codedrills.io/articles/codedrills-frontend-internship-assignment)
+
+![Alt text](./docs/video.gif)
 
 ## Project setup
-```
-pnpm install
+```bash
+git clone git@github.com:sadn1ck/task-codedrills.git
+
+cd task-codedrills
+
+yarn install
 ```
 
 ### Compiles and hot-reloads for development
-```
-pnpm run serve
+```bash
+yarn run serve
+
+# Go to localhost:8080 to see the site in dev mode
 ```
 
 ### Compiles and minifies for production
 ```
-pnpm run build
+yarn run build
 ```
 
 ### Lints and fixes files
 ```
-pnpm run lint
+yarn run lint
 ```
 
 ### Customize configuration

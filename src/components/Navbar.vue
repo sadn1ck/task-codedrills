@@ -10,6 +10,14 @@
         <v-icon left>{{ item.icon }}</v-icon>
         {{ item.title }}
       </v-btn>
+      <v-btn icon @click="$vuetify.theme.dark = !$vuetify.theme.dark">
+        <v-icon v-if="$vuetify.theme.dark">
+          mdi-white-balance-sunny
+        </v-icon>
+        <v-icon v-else>
+          mdi-moon-waxing-crescent
+        </v-icon>
+      </v-btn>
     </v-toolbar>
     <!-- for mobiles -->
     <v-toolbar class="hidden-md-and-up">
