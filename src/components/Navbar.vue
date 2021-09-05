@@ -10,14 +10,7 @@
         <v-icon left>{{ item.icon }}</v-icon>
         {{ item.title }}
       </v-btn>
-      <v-btn icon @click="$vuetify.theme.dark = !$vuetify.theme.dark">
-        <v-icon v-if="$vuetify.theme.dark">
-          mdi-white-balance-sunny
-        </v-icon>
-        <v-icon v-else>
-          mdi-moon-waxing-crescent
-        </v-icon>
-      </v-btn>
+      <ThemeSwitcher />
     </v-toolbar>
     <!-- for mobiles -->
     <v-toolbar class="hidden-md-and-up">
@@ -25,6 +18,8 @@
       <v-toolbar-title>
         FakeCodeDrills
       </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <ThemeSwitcher />
     </v-toolbar>
     <v-navigation-drawer
       v-model="drawer"
@@ -60,9 +55,11 @@
 </template>
 <script>
 import Vue from 'vue';
+import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
 
 export default Vue.extend({
   name: 'Navbar',
+  components: { ThemeSwitcher },
   data() {
     return {
       appTitle: 'FakeCodeDrills',
